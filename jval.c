@@ -35,6 +35,8 @@ Knoxville, TN 37996-3450
 Fax: 865-974-4404
  */
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "jval.h"
 
 Jval JNULL;
@@ -104,38 +106,6 @@ Jval new_jval_ui(unsigned int i) {
   j.i = i;
   return j;
 }
-  
-Jval new_jval_iarray(int i0, int i1) {
-  Jval j;
-  j.iarray[0] = i0;
-  j.iarray[1] = i1;
-  return j;
-}
-  
-Jval new_jval_farray(float f0, float f1) {
-  Jval j;
-  j.farray[0] = f0;
-  j.farray[1] = f1;
-  return j;
-}
-  
-Jval new_jval_carray_nt(char *carray) {
-  Jval j;
-  int i;
-
-  for (i = 0; i < 8 && carray[i] != '\0'; i++) {
-    j.carray[i] = carray[i];
-  }
-  if (i < 8) j.carray[i] = carray[i];
-  return j;
-}
-  
-Jval new_jval_carray_nnt(char *carray) {
-  Jval j;
-
-  memcpy(j.carray, carray, 8);
-  return j;
-}
 
 int jval_i(Jval j) {
   return j.i;
@@ -180,16 +150,3 @@ unsigned short jval_ush(Jval j) {
 unsigned int jval_ui(Jval j) {
   return j.ui;
 }
-
-int *jval_iarray(Jval j) {
-  return j.iarray;
-}
-
-float *jval_farray(Jval j) {
-  return j.farray;
-}
-
-char *jval_carray(Jval j) {
-  return j.carray;
-}
-

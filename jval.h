@@ -51,28 +51,19 @@ typedef union {
     short sh;
     unsigned short ush;
     unsigned int ui;
-    int iarray[2];
-    float farray[2];
-    char carray[8];
-    unsigned char ucarray[8];
-  } Jval;  
+} Jval;
 
 extern Jval new_jval_i(int);
 extern Jval new_jval_l(long);
 extern Jval new_jval_f(float);
 extern Jval new_jval_d(double);
-extern Jval new_jval_v(/* void */);
+extern Jval new_jval_v(void *);
 extern Jval new_jval_s(char *);
 extern Jval new_jval_c(char);
 extern Jval new_jval_uc(unsigned char);
 extern Jval new_jval_sh(short);
 extern Jval new_jval_ush(unsigned short);
 extern Jval new_jval_ui(unsigned int);
-extern Jval new_jval_iarray(int, int);
-extern Jval new_jval_farray(float, float);
-extern Jval new_jval_carray_nt(char *);  /* Carray is null terminated */
-extern Jval new_jval_carray_nnt(char *);  /* Carray is not null terminated */
-       /* For ucarray -- use carray, because it uses memcpy */
 
 extern Jval JNULL;
 
@@ -87,8 +78,5 @@ extern unsigned char jval_uc(Jval);
 extern short jval_sh(Jval);
 extern unsigned short jval_ush(Jval);
 extern unsigned int jval_ui(Jval);
-extern int *jval_iarray(Jval);
-extern float *jval_farray(Jval);
-extern char *jval_carray(Jval);
 
 #endif

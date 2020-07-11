@@ -35,6 +35,9 @@ Knoxville, TN 37996-3450
 Fax: 865-974-4404
 */
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include "fields.h"
 
 #define talloc(ty, sz) (ty *) malloc (sz * sizeof(ty))
