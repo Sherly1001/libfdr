@@ -42,111 +42,111 @@ Fax: 865-974-4404
 Jval JNULL;
 
 Jval new_jval_i(int i) {
-  Jval j;
-  j.i = i;
-  return j;
+    Jval j;
+    j.i = i;
+    return j;
 }
-  
+
 Jval new_jval_l(long l) {
-  Jval j;
-  j.l = l;
-  return j;
+    Jval j;
+    j.l = l;
+    return j;
 }
-  
+
 Jval new_jval_f(float f) {
-  Jval j;
-  j.f = f;
-  return j;
+    Jval j;
+    j.f = f;
+    return j;
 }
-  
+
 Jval new_jval_d(double d) {
-  Jval j;
-  j.d = d;
-  return j;
+    Jval j;
+    j.d = d;
+    return j;
 }
-  
+
 Jval new_jval_v(void *v) {
-  Jval j;
-  j.v = v;
-  return j;
+    Jval j;
+    j.v = v;
+    return j;
 }
-  
+
 Jval new_jval_s(char *s) {
-  Jval j;
-  j.s = s;
-  return j;
+    Jval j;
+    j.s = s;
+    return j;
 }
-  
+
 Jval new_jval_c(char c) {
-  Jval j;
-  j.c = c;
-  return j;
+    Jval j;
+    j.c = c;
+    return j;
 }
-  
+
 Jval new_jval_uc(unsigned char uc) {
-  Jval j;
-  j.uc = uc;
-  return j;
+    Jval j;
+    j.uc = uc;
+    return j;
 }
-  
+
 Jval new_jval_sh(short sh) {
-  Jval j;
-  j.sh = sh;
-  return j;
+    Jval j;
+    j.sh = sh;
+    return j;
 }
-  
+
 Jval new_jval_ush(unsigned short ush) {
-  Jval j;
-  j.ush = ush;
-  return j;
+    Jval j;
+    j.ush = ush;
+    return j;
 }
-  
+
 Jval new_jval_ui(unsigned int i) {
-  Jval j;
-  j.i = i;
-  return j;
+    Jval j;
+    j.i = i;
+    return j;
 }
 
 int jval_i(Jval j) {
-  return j.i;
+    return j.i;
 }
 
 long jval_l(Jval j) {
-  return j.l;
+    return j.l;
 }
 
 float jval_f(Jval j) {
-  return j.f;
+    return j.f;
 }
 
 double jval_d(Jval j) {
-  return j.d;
+    return j.d;
 }
 
 void *jval_v(Jval j) {
-  return j.v;
+    return j.v;
 }
 
 char *jval_s(Jval j) {
-  return j.s;
+    return j.s;
 }
 
 char jval_c(Jval j) {
-  return j.c;
+    return j.c;
 }
 
 unsigned char jval_uc(Jval j) {
-  return j.uc;
+    return j.uc;
 }
 
 short jval_sh(Jval j) {
-  return j.sh;
+    return j.sh;
 }
 
 unsigned short jval_ush(Jval j) {
-  return j.ush;
+    return j.ush;
 }
 
 unsigned int jval_ui(Jval j) {
-  return j.ui;
+    return j.ui;
 }

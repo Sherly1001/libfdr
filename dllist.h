@@ -40,9 +40,9 @@ Fax: 865-974-4404
 #include "jval.h"
 
 typedef struct dllist {
-  struct dllist *flink;
-  struct dllist *blink;
-  Jval val;
+    struct dllist *flink;
+    struct dllist *blink;
+    Jval val;
 } *Dllist;
 
 extern Dllist new_dllist();
